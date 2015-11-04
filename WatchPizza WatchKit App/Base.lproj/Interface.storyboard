@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8092"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchPizza_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label width="132" alignment="center" verticalAlignment="center" text="Watch Pizza" textAlignment="center" baselineAdjustment="alignCenters" id="Jud-ff-rde"/>
+                        <label alignment="center" verticalAlignment="center" text="Crea tu Pizza" baselineAdjustment="alignCenters" id="I8V-Wg-0hh"/>
+                        <button width="1" widthAdjustment="1" alignment="center" verticalAlignment="center" alpha="0.75" title="Iniciemos" id="JTS-81-ccM">
+                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                            <connections>
+                                <segue destination="iXL-F0-6jJ" kind="push" id="vMe-hl-UtS"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="235" y="347"/>
+        </scene>
+        <!--Tamano Controller-->
+        <scene sceneID="f6j-hz-7z3">
+            <objects>
+                <controller hidesWhenLoading="NO" id="iXL-F0-6jJ" customClass="tamanoController" customModule="WatchPizza_WatchKit_Extension">
+                    <items>
+                        <label width="123" alignment="center" text="Tamaño" textAlignment="center" numberOfLines="2" id="4Jt-OI-ZNA">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <label width="122" alignment="center" text="Chica" textAlignment="center" id="CJb-xS-moP">
+                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                        </label>
+                        <slider width="1" alignment="left" value="1" maximum="3" steps="3" id="fm7-4D-kkp">
+                            <connections>
+                                <action selector="cambiarTamano:" destination="iXL-F0-6jJ" id="479-no-4vk"/>
+                            </connections>
+                        </slider>
+                        <button width="1" alignment="left" alpha="0.75" title="Continua..." id="Meh-Ps-Tgi">
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                            <connections>
+                                <segue destination="xLM-WU-YCv" kind="push" id="SRn-hu-97G"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="lblTamano" destination="CJb-xS-moP" id="c3E-3e-XYk"/>
+                        <outlet property="slideTamano" destination="fm7-4D-kkp" id="p41-a9-eVV"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="446" y="349"/>
+        </scene>
+        <!--Tipo Queso Controller-->
+        <scene sceneID="EKe-lr-iSc">
+            <objects>
+                <controller hidesWhenLoading="NO" id="QfB-Z3-6j9" customClass="tipoQuesoController" customModule="WatchPizza_WatchKit_Extension">
+                    <items>
+                        <label width="119" alignment="center" text="Tipo de Queso" textAlignment="center" id="AY3-vC-U0i">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <label width="122" alignment="center" text="Mozarela" textAlignment="center" id="tJB-59-6ql">
+                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                        </label>
+                        <slider width="1" alignment="left" value="1" maximum="4" steps="4" id="TOt-gW-lEV">
+                            <connections>
+                                <action selector="cambiarTipoQueso:" destination="QfB-Z3-6j9" id="QGV-Wu-cOk"/>
+                            </connections>
+                        </slider>
+                        <button width="1" alignment="left" alpha="0.75" title="Continua..." id="KJg-Rc-uay">
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                            <connections>
+                                <segue destination="iNo-vN-CeQ" kind="push" id="BPL-qY-RY8"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="lblTipoQueso" destination="tJB-59-6ql" id="ft8-AR-xrv"/>
+                        <outlet property="slideTipoQueso" destination="TOt-gW-lEV" id="bke-LG-ERZ"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="896" y="352"/>
+        </scene>
+        <!--Tipo Masa Controller-->
+        <scene sceneID="zQt-iC-Eqk">
+            <objects>
+                <controller hidesWhenLoading="NO" id="xLM-WU-YCv" customClass="tipoMasaController" customModule="WatchPizza_WatchKit_Extension">
+                    <items>
+                        <label width="124" alignment="center" text="Tipo de Masa" textAlignment="center" id="H8P-J3-9MX">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <label width="123" alignment="center" text="Delgada" textAlignment="center" id="AJY-aC-pV1">
+                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                        </label>
+                        <slider width="1" alignment="left" value="1" maximum="3" steps="3" id="ipv-5A-SBC">
+                            <connections>
+                                <action selector="cambiarTipoMasa:" destination="xLM-WU-YCv" id="jYb-be-kHl"/>
+                            </connections>
+                        </slider>
+                        <button width="1" alignment="left" alpha="0.75" title="Continua..." id="jfo-KC-hcc">
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                            <connections>
+                                <segue destination="QfB-Z3-6j9" kind="push" id="F7e-SF-UiP"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="lblTipoMasa" destination="AJY-aC-pV1" id="hEd-UD-6XV"/>
+                        <outlet property="slideTipoMasa" destination="ipv-5A-SBC" id="QEY-5x-CJ6"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="681" y="352"/>
+        </scene>
+        <!--Ingredientes Controller-->
+        <scene sceneID="y4h-Iq-hJY">
+            <objects>
+                <controller hidesWhenLoading="NO" id="iNo-vN-CeQ" customClass="ingredientesController" customModule="WatchPizza_WatchKit_Extension">
+                    <items>
+                        <label width="121" alignment="center" text="Ingredientes" textAlignment="center" id="9Mi-Fh-fc6">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <label width="125" alignment="center" text="Escoge 5" textAlignment="center" id="bVz-fm-qCh">
+                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                        </label>
+                        <switch width="1" height="23" alignment="left" title="Jamón" id="fID-6f-b5f">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                            <connections>
+                                <action selector="swJamon:" destination="iNo-vN-CeQ" id="uF2-mc-djU"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" height="23" alignment="left" title="Cebolla" id="XIj-hf-Kaf">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                            <connections>
+                                <action selector="swCebolla:" destination="iNo-vN-CeQ" id="zXn-UP-Wd0"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" height="23" alignment="left" title="Pepperoni" id="OhO-lg-r1g">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                            <connections>
+                                <action selector="swPepperoni:" destination="iNo-vN-CeQ" id="dPT-GN-NQm"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" height="23" alignment="left" title="Pimiento" id="NZj-2F-hqe">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                            <connections>
+                                <action selector="swPimiento:" destination="iNo-vN-CeQ" id="H3y-Fw-n1X"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" height="23" alignment="left" title="Pavo" id="NtU-An-sX0">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                            <connections>
+                                <action selector="swPavo:" destination="iNo-vN-CeQ" id="9Pw-kn-TLx"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" height="23" alignment="left" title="Piña" id="Wnc-yc-BmE">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                            <connections>
+                                <action selector="swPiña:" destination="iNo-vN-CeQ" id="d18-Er-jsB"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" height="23" alignment="left" title="Salchicha" id="2E4-KV-4kR">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                            <connections>
+                                <action selector="swSalchicha:" destination="iNo-vN-CeQ" id="zj8-vJ-Ghd"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" height="23" alignment="left" title="Anchoa" id="DbG-ID-hzl">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                            <connections>
+                                <action selector="swAnchoa:" destination="iNo-vN-CeQ" id="ZJy-Qx-TuR"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" height="23" alignment="left" title="Aceituna" id="Wom-j1-qiE">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                            <connections>
+                                <action selector="swAceituna:" destination="iNo-vN-CeQ" id="fl7-gJ-W8i"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" height="23" alignment="left" title="Ciruelas" id="U2K-IQ-kRW">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                            <connections>
+                                <action selector="swCiruela:" destination="iNo-vN-CeQ" id="6kq-kM-fRr"/>
+                            </connections>
+                        </switch>
+                        <button width="1" alignment="left" alpha="0.75" title="Confirmar" id="Llg-WO-oEq">
+                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                            <connections>
+                                <segue destination="Z8s-uv-KaB" kind="push" id="hNL-xl-RcK"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="sAceituna" destination="Wom-j1-qiE" id="4OS-P7-8H5"/>
+                        <outlet property="sAnchoa" destination="DbG-ID-hzl" id="5Ab-93-Jnr"/>
+                        <outlet property="sCebolla" destination="XIj-hf-Kaf" id="Bma-AF-6JL"/>
+                        <outlet property="sCiruela" destination="U2K-IQ-kRW" id="Hcv-6U-rn5"/>
+                        <outlet property="sJamon" destination="fID-6f-b5f" id="kR0-6J-Cd2"/>
+                        <outlet property="sPavo" destination="NtU-An-sX0" id="sRa-QK-boq"/>
+                        <outlet property="sPepperoni" destination="OhO-lg-r1g" id="3mg-gK-9Qd"/>
+                        <outlet property="sPimiento" destination="NZj-2F-hqe" id="a4L-XO-uBu"/>
+                        <outlet property="sPiña" destination="Wnc-yc-BmE" id="Ia6-6y-9Yj"/>
+                        <outlet property="sSalchicha" destination="2E4-KV-4kR" id="h29-yf-BBo"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1132" y="351.5"/>
+        </scene>
+        <!--Resumen Controller-->
+        <scene sceneID="oKe-lH-DSk">
+            <objects>
+                <controller hidesWhenLoading="NO" id="Z8s-uv-KaB" customClass="resumenController" customModule="WatchPizza_WatchKit_Extension">
+                    <items>
+                        <label width="118" alignment="center" text="Tu Pizza pedida !" textAlignment="center" id="BJH-hx-KjG">
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                        </label>
+                        <label width="121" alignment="center" text="1" textAlignment="center" id="AGc-cr-mIl">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
+                        <label width="118" alignment="center" text="2" textAlignment="center" id="CKK-fL-gbb">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
+                        <label width="119" alignment="center" text="3" textAlignment="center" id="1ea-Uw-a2f">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
+                        <label width="129" height="28" alignment="center" text="4" textAlignment="center" numberOfLines="3" id="LtI-dL-2yU">
+                            <fontDescription key="font" type="system" pointSize="9"/>
+                        </label>
+                        <button width="1" alignment="left" title="Comprar" id="rkQ-pb-Csc">
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="mMN-rJ-g82" kind="modal" id="rCw-zd-xZU"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="btnComprar" destination="rkQ-pb-Csc" id="pN8-1u-9Ov"/>
+                        <outlet property="lblIngredientes" destination="LtI-dL-2yU" id="8fU-QV-lxx"/>
+                        <outlet property="lblTamano" destination="AGc-cr-mIl" id="hib-VO-if4"/>
+                        <outlet property="lblTipoMasa" destination="CKK-fL-gbb" id="ed1-iV-QFR"/>
+                        <outlet property="lblTipoQueso" destination="1ea-Uw-a2f" id="5aw-IY-vfS"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1356" y="352"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="bW6-aS-dcd">
+            <objects>
+                <controller hidesWhenLoading="NO" id="mMN-rJ-g82">
+                    <items>
+                        <label width="1" height="1" alignment="left" text="Comprado !!!" textAlignment="center" id="Aed-Pf-jZY"/>
+                    </items>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1596" y="350"/>
+        </scene>
+        <!--Glance Interface Controller-->
+        <scene sceneID="BOz-TT-tkC">
+            <objects>
+                <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController" customModule="WatchPizza_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group alignment="left" id="t8f-Gd-c4y"/>
+                        <group alignment="left" id="uCw-4Q-Ouw"/>
+                    </items>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="235" y="672"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="XkS-y5-khE"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="XkS-y5-khE" id="49B-RR-99y"/>
+                        <segue destination="gdX-wl-uQE" kind="relationship" relationship="dynamicNotificationInterface" id="fKh-qV-3T2"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="235" y="1001"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="KIl-fV-djm">
+            <objects>
+                <controller id="gdX-wl-uQE" customClass="NotificationController" customModule="WatchPizza_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="553" y="1001"/>
+        </scene>
+    </scenes>
+</document>
